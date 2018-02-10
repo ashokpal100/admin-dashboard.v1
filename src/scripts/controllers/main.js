@@ -6,6 +6,16 @@
  * # MainCtrl
  * Controller of the adminApp
  */
-angular.module('adminApp')
-  .controller('MainCtrl', function($scope) {
-  });
+angular.module('adminApp').controller('MainCtrl', function($scope) {
+  
+        
+        $scope.collapseVar = 0;
+        $scope.check = function(x){
+          if(x==$scope.collapseVar)
+            $scope.collapseVar = 0;
+          else
+            $scope.collapseVar = x;
+        };
+        
+    
+});
