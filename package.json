@@ -1,0 +1,30 @@
+{
+  "name": "admin-dashboard.v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "angularjs bootstrap gulp echarts mapbox jquery",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashokpal100/admin-dashboard.v1.git"
+  },
+  "author": "ashok pal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashokpal100/admin-dashboard.v1/issues"
+  },
+  "homepage": "https://github.com/ashokpal100/admin-dashboard.v1#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.2.0"
+  },
+  "devDependencies": {
+    "gulp-connect": "^5.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-server-livereload": "^1.9.2"
+  }
+}
