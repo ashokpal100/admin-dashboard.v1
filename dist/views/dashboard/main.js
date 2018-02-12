@@ -1,0 +1,1 @@
+angular.module("adminApp").controller("MainCtrl",["$scope",function(e){console.log("came here MainCtrl"),e.menuToggle=function(){$("#wrapper").toggleClass("active")}}]);

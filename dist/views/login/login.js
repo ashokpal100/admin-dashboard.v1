@@ -1,0 +1,1 @@
+angular.module("adminApp").controller("LoginCtrl",["$scope","Notification",function(o,n){console.log("came here LoginCtrl")}]);

@@ -6,4 +6,15 @@
  *
  * Main module of the application.
  */
-angular.module('adminApp', ['oc.lazyLoad','ui.router','ui.bootstrap']);
+angular.module('adminApp', [
+    'oc.lazyLoad',
+    'ui.router',
+    'ui.bootstrap',
+    'angular-echarts',
+    'ngMaterial',
+    'ngAnimate',
+    'ngMessages',
+    'ngAria',
+    'ui-notification',
+    'ngCookies'
+]);
