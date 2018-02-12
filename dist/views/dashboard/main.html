@@ -1,7 +1,82 @@
-<script type=text/javascript>
+<script type="text/javascript">
     /*Menu-toggle*/
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("active");
     });
-</script><div id=wrapper><nav class="navbar navbar-inverse navbar-fixed-top" role=navigation><div class=container-fluid><div class=navbar-header><button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#navbar aria-expanded=false aria-controls=navbar><span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span></button><div class=navbar-brand><a id=menu-toggle href=# class="glyphicon glyphicon-align-justify btn-menu toggle"><!--<i class="fa fa-bars"></i>--></a> <a href=#>Project name</a></div></div><div id=navbar class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class=active><a href=#>Home</a></li><li><a href=#about>About</a></li></ul></div></div></nav><div id=sidebar-wrapper><nav id=spy><ul class="sidebar-nav nav"><li class=sidebar-brand><a href=#home><span class="fa fa-home solo">Home</span></a></li><li><a href=#anch1><span class="fa fa-anchor solo">Anchor 1</span></a></li><li><a href=#anch2><span class="fa fa-anchor solo">Anchor 2</span></a></li><li><a href=#anch3><span class="fa fa-anchor solo">Anchor 3</span></a></li><li><a href=#anch4><span class="fa fa-anchor solo">Anchor 4</span></a></li><li><!--<uib-accordion>--><!--<div uib-accordion-group is-open="status.open">--><!--<uib-accordion-heading>--><!--I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>--><!--</uib-accordion-heading>--><!--This is just some content to illustrate fancy headings.--><!--</div>--><!--</uib-accordion>--></li></ul></nav></div><!--Page content--><div id=page-content-wrapper><div class=page-content><div ui-view=""></div></div></div></div>
+</script>
+
+<div id="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+    			</button>
+                <div  class="navbar-brand">
+                    <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
+                        <!--<i class="fa fa-bars"></i>-->
+                    </a>
+                    <img src="img/testIO-logo-rgb.png"></img>
+    				<a href="#">Project name</a>
+                </div>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+    <div id="sidebar-wrapper">
+        <nav id="spy" class="nav-side-menu">
+            <ul class="sidebar-nav nav">
+                
+                <li class="sidebar-brand">
+                    <a href="#home"><span class="fa fa-home solo">Home</span></a>
+                </li>
+                <li>
+                    <a href="#anch1">
+                        <span class="fa fa-anchor solo">Anchor 1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch2">
+                        <span class="fa fa-anchor solo">Anchor 2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch3">
+                        <span class="fa fa-anchor solo">Anchor 3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch4">
+                        <span class="fa fa-anchor solo">Anchor 4</span>
+                    </a>
+                </li>
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
+                </li>  
+                <ul class="sub-menu collapse" id="service">
+                  <li>New Service 1</li>
+                  <li>New Service 2</li>
+                  <li>New Service 3</li>
+                </ul>
+            </ul>
+        </nav>
+    </div>
+    
+    
+    <!-- Page content -->
+    <div id="page-content-wrapper">
+        <div class="page-content">
+            <div ui-view></div>
+        </div>
+    </div>
+</div>

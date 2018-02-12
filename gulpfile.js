@@ -18,7 +18,6 @@ gulp.task('useref', function(){
   return gulp.src('src/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
-    // Minifies only if it's a CSS file
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
@@ -91,9 +90,6 @@ gulp.task('dev', function (callback) {
         ['useref',
         'fonts',
         'images','views','js'],
-        'minify-ctrl',
-        'minify-html',
-        'minify-css',
         'watch',
     callback);
 });
@@ -122,4 +118,18 @@ gulp.task('watch', function() {
 gulp.task('default', function () {
     runSequence('dev');
 });
+
+
+gulp.task('html', function () {
+  gulp.src('./src/*.html')
+    .pipe(gulp.dest('dist'))
+    .pipe(connect.reload());
+});
+
+gulp.task('watch1', function () {
+  gulp.watch(['./src/*.html'], ['html']);
+});
+
+gulp.task('default', ['connect', 'watch']);
+
 
